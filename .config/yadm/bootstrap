@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+set -e
+set -x
+
+pip3 install --user pynvim
+
+mkdir -pv .local/share/nvim/site/pack
+
+mkdir -pv .local/share/nvim/site/pack/lspconfig/start
+wget \
+    --output-document=- \
+    "https://github.com/neovim/nvim-lspconfig/archive/refs/tags/v0.1.4.tar.gz" \
+| tar \
+    --verbose \
+    --extract \
+    --gunzip \
+    --directory="$HOME/.local/share/nvim/site/pack/lspconfig/start"
+
