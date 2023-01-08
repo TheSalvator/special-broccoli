@@ -12,7 +12,6 @@ wget \
     --output-document=- \
     "https://github.com/neovim/nvim-lspconfig/archive/refs/tags/v0.1.4.tar.gz" \
 | tar \
-    --verbose \
     --extract \
     --gunzip \
     --directory="$HOME/.local/share/nvim/site/pack/lspconfig/start"
